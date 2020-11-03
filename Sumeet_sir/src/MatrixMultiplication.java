@@ -32,6 +32,7 @@ class MatrixMultiplication {
             }
         }else{
             System.out.println("invalid input");
+            return;
         }
         
         for (int i = 0; i < ans.length; i++) {
