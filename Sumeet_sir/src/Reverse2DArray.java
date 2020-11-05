@@ -2,8 +2,7 @@
 import java.util.Scanner;
 
 
-public class RotateBy90Degree {
-//    to print final answer
+public class Reverse2DArray {
     public static void display(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
@@ -12,38 +11,17 @@ public class RotateBy90Degree {
             System.out.println();
         }
     }
-    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n= scn.nextInt();
-        int arr[][]= new int[n][n];
-        
+        int r = scn.nextInt();
+        int c = scn.nextInt();
+        int[][] arr = new int[r][c];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                arr[i][j] = scn.nextInt();
+                arr[i][j]= scn.nextInt();
             }
         }
         
-//        main code
-
-//        for (int j = 0; j < arr.length; j++) {
-//            for (int i = arr[0].length-1; i >= 0; i--) {
-//                System.out.print(arr[i][j]+ " ");
-//            }
-//            System.out.println();
-//        }
-
-//          Transpose 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr[0].length; j++) {
-                int temp = arr[i][j];    // i -> j and j -> i
-                arr[i][j] = arr[j][i];
-                arr[j][i] = temp;
-            }
-        }
-        
-        
-//        Reverse
         for (int i = 0; i < arr.length; i++) {
             int li = 0;
             int ri = arr[i].length-1;
@@ -56,6 +34,7 @@ public class RotateBy90Degree {
                 ri--;
             }
         }
+        
         display(arr);
     }
     
